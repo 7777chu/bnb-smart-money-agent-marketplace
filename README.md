@@ -10,6 +10,10 @@ BSC testnet proof wallet: `0x617f44e176fd0163614761c4a2bb901650aeab66`
 
 Explorer: https://testnet.bscscan.com/address/0x617f44e176fd0163614761c4a2bb901650aeab66
 
+BSC testnet proof tx: `0x38923db4f65ce099350acd302046d86c8646be7749eb4faac1c03dbc50324af1`
+
+Proof tx explorer: https://testnet.bscscan.com/tx/0x38923db4f65ce099350acd302046d86c8646be7749eb4faac1c03dbc50324af1
+
 ## One-liner
 
 A BNB Chain AI Agent marketplace for discovering, comparing, and safely hiring Smart Money agents across grid trading, LP rebalancing, yield optimization, and lending health-factor protection.
@@ -81,7 +85,8 @@ Latest local verification passed with the MVP routes prerendered successfully.
 
 The current MVP is honest about what is live and what is next. The next sprint adds concrete testnet proof:
 
-1. Use the public BSC testnet proof wallet listed above.
-2. Register or mock an ERC-8004-style agent identity.
-3. Attach testnet tx hashes for session creation, simulated hire, revoke, and PancakeSwap-style proof.
-4. Run BNB Agent Studio CLI and commit command output/screenshots as proof artifacts.
+1. Public BSC testnet proof wallet is listed above.
+2. Confirmed BSC testnet proof transaction is listed above.
+3. Register or mock an ERC-8004-style agent identity.
+4. Add more tx hashes for session creation, simulated hire, revoke, and PancakeSwap-style proof.
+5. Run BNB Agent Studio CLI and commit command output/screenshots as proof artifacts.

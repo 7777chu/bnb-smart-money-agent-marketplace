@@ -9,6 +9,8 @@ const liveLinks = [
 
 const testnetWallet = "0x617f44e176fd0163614761c4a2bb901650aeab66";
 const testnetWalletExplorer = `https://testnet.bscscan.com/address/${testnetWallet}`;
+const testnetProofTx = "0x38923db4f65ce099350acd302046d86c8646be7749eb4faac1c03dbc50324af1";
+const testnetProofTxExplorer = `https://testnet.bscscan.com/tx/${testnetProofTx}`;
 
 const proofTracks = [
   {
@@ -40,7 +42,7 @@ const proofTracks = [
 const nextProofItems = [
   ["BSC testnet wallet", `${testnetWallet} — public address added for proof artifacts.`],
   ["Agent identity", "Register or mock ERC-8004-style identity and link it from each profile."],
-  ["Testnet tx hashes", "Attach tx hashes for session creation, simulated hire, revoke, and PancakeSwap-style proof."],
+  ["Testnet tx hashes", `${testnetProofTx} — confirmed BSC testnet proof transaction.`],
   ["BNB Agent Studio", "Run BNB Agent Studio CLI and commit command output/screenshots as proof artifacts."],
 ];
 
@@ -97,6 +99,19 @@ export default function ProofPage() {
           </p>
           <a className="mt-5 inline-flex rounded-2xl border border-yellow-300/40 px-5 py-3 font-bold text-yellow-100 transition hover:bg-yellow-300 hover:text-black" href={testnetWalletExplorer} target="_blank">
             View on BSCScan testnet
+          </a>
+        </section>
+
+        <section className="rounded-3xl border border-emerald-400/20 bg-emerald-400/10 p-6">
+          <p className="text-sm uppercase tracking-[0.3em] text-emerald-100/70">Confirmed testnet transaction</p>
+          <h2 className="mt-2 text-3xl font-bold text-emerald-100">BSC testnet proof tx</h2>
+          <p className="mt-3 break-words font-mono text-sm text-zinc-100">{testnetProofTx}</p>
+          <p className="mt-3 max-w-3xl text-zinc-300">
+            This transaction anchors the marketplace proof wallet on BSC testnet. It was sent from the proof wallet to itself
+            with metadata for the BNB Smart Money Agent Marketplace hire-session proof.
+          </p>
+          <a className="mt-5 inline-flex rounded-2xl border border-emerald-300/40 px-5 py-3 font-bold text-emerald-100 transition hover:bg-emerald-300 hover:text-black" href={testnetProofTxExplorer} target="_blank">
+            View proof transaction
           </a>
         </section>
 
