@@ -7,7 +7,7 @@ const liveLinks = [
   ["Advantage report", "https://bnb-smart-money-agent-marketplace.vercel.app/report"],
 ];
 
-const testnetWallet = "0xfec7107aced49665c420f71c64023dddd07b7777";
+const testnetWallet = "0x617f44e176fd0163614761c4a2bb901650aeab66";
 const testnetWalletExplorer = `https://testnet.bscscan.com/address/${testnetWallet}`;
 
 const proofTracks = [

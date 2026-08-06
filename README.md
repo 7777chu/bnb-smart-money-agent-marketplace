@@ -6,9 +6,9 @@ Live demo: https://bnb-smart-money-agent-marketplace.vercel.app
 
 GitHub repo: https://github.com/7777chu/bnb-smart-money-agent-marketplace
 
-BSC testnet proof wallet: `0xfec7107aced49665c420f71c64023dddd07b7777`
+BSC testnet proof wallet: `0x617f44e176fd0163614761c4a2bb901650aeab66`
 
-Explorer: https://testnet.bscscan.com/address/0xfec7107aced49665c420f71c64023dddd07b7777
+Explorer: https://testnet.bscscan.com/address/0x617f44e176fd0163614761c4a2bb901650aeab66
 
 ## One-liner
 
