@@ -19,6 +19,9 @@ export default function ReportPage() {
           <Link className="rounded-full border border-white/10 px-4 py-2 text-sm transition hover:bg-white/10" href="/compare">
             Compare agents
           </Link>
+          <Link className="rounded-full border border-yellow-300/40 px-4 py-2 text-sm text-yellow-100 transition hover:bg-yellow-300 hover:text-black" href="/proof">
+            Proof center
+          </Link>
         </nav>
 
         <header className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
