@@ -2,6 +2,8 @@
 
 Hackathon: [The Smart Money Era: Build the Era](https://www.bnbchain.org/en/hackathons/smart-money-era?tab=overview)
 
+Live demo: https://bnb-smart-money-agent-marketplace.vercel.app
+
 ## One-liner
 
 A BNB Chain AI Agent marketplace for discovering, comparing, and hiring Smart Money agents across grid trading, LP rebalancing, yield optimization, and lending health-factor protection.
@@ -26,8 +28,8 @@ BNB Chain already has many agents, but users cannot easily discover which agent 
 
 ## Submission Assets
 
-- Online demo
-- GitHub repo
+- Online demo: https://bnb-smart-money-agent-marketplace.vercel.app
+- GitHub repo: https://github.com/7777chu/bnb-smart-money-agent-marketplace
 - 2-3 minute demo video
 - Pitch deck
 - Agent Advantage Report
