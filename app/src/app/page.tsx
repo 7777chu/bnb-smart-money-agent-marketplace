@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { agents, categories } from "@/lib/agents";
 
 const riskColor = {
@@ -15,13 +16,18 @@ export default function Home() {
             <p className="text-sm uppercase tracking-[0.4em] text-yellow-300">BNB Chain Hackathon</p>
             <h1 className="mt-2 text-2xl font-semibold">Smart Money Agent Marketplace</h1>
           </div>
-          <a
-            className="rounded-full border border-yellow-300/50 px-4 py-2 text-sm text-yellow-100 transition hover:bg-yellow-300 hover:text-black"
-            href="https://www.bnbchain.org/en/hackathons/smart-money-era?tab=overview"
-            target="_blank"
-          >
-            Build the Era
-          </a>
+          <div className="flex items-center gap-3">
+            <Link className="hidden rounded-full border border-white/10 px-4 py-2 text-sm text-zinc-200 transition hover:bg-white/10 sm:inline-flex" href="/compare">
+              Compare
+            </Link>
+            <a
+              className="rounded-full border border-yellow-300/50 px-4 py-2 text-sm text-yellow-100 transition hover:bg-yellow-300 hover:text-black"
+              href="https://www.bnbchain.org/en/hackathons/smart-money-era?tab=overview"
+              target="_blank"
+            >
+              Build the Era
+            </a>
+          </div>
         </nav>
 
         <section className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
@@ -42,6 +48,14 @@ export default function Home() {
                   {category}
                 </span>
               ))}
+            </div>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link className="rounded-2xl bg-yellow-300 px-5 py-3 font-bold text-black transition hover:bg-yellow-200" href="/compare">
+                Compare agents
+              </Link>
+              <Link className="rounded-2xl border border-white/15 px-5 py-3 font-bold text-white transition hover:bg-white/10" href="/report">
+                Advantage report
+              </Link>
             </div>
           </div>
 
@@ -87,6 +101,7 @@ export default function Home() {
                   </span>
                 </div>
                 <p className="mt-4 text-zinc-300">{agent.summary}</p>
+                <p className="mt-2 text-sm text-yellow-100/80">{agent.tagline}</p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {agent.protocols.map((protocol) => (
                     <span key={protocol} className="rounded-full bg-white/10 px-3 py-1 text-xs text-zinc-200">
@@ -105,12 +120,19 @@ export default function Home() {
                   </div>
                   <div>
                     <dt className="text-zinc-500">Spend cap / expiry</dt>
-                    <dd>{agent.sessionPolicy.spendCap} · {agent.sessionPolicy.expiry}</dd>
+                    <dd>
+                      {agent.sessionPolicy.spendCap} · {agent.sessionPolicy.expiry}
+                    </dd>
                   </div>
                 </dl>
-                <button className="mt-6 w-full rounded-2xl bg-yellow-300 px-4 py-3 font-bold text-black transition hover:bg-yellow-200">
-                  Hire agent safely
-                </button>
+                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  <Link className="rounded-2xl border border-white/15 px-4 py-3 text-center font-bold text-white transition hover:bg-white/10" href={`/agents/${agent.id}`}>
+                    View profile
+                  </Link>
+                  <Link className="rounded-2xl bg-yellow-300 px-4 py-3 text-center font-bold text-black transition hover:bg-yellow-200" href={`/hire/${agent.id}`}>
+                    Hire safely
+                  </Link>
+                </div>
               </article>
             ))}
           </div>
