@@ -6,6 +6,10 @@ Live demo: https://bnb-smart-money-agent-marketplace.vercel.app
 
 GitHub repo: https://github.com/7777chu/bnb-smart-money-agent-marketplace
 
+BSC testnet proof wallet: `0xfec7107aced49665c420f71c64023dddd07b7777`
+
+Explorer: https://testnet.bscscan.com/address/0xfec7107aced49665c420f71c64023dddd07b7777
+
 ## One-liner
 
 A BNB Chain AI Agent marketplace for discovering, comparing, and safely hiring Smart Money agents across grid trading, LP rebalancing, yield optimization, and lending health-factor protection.
@@ -77,7 +81,7 @@ Latest local verification passed with the MVP routes prerendered successfully.
 
 The current MVP is honest about what is live and what is next. The next sprint adds concrete testnet proof:
 
-1. Add BSC testnet wallet address used only for proof.
+1. Use the public BSC testnet proof wallet listed above.
 2. Register or mock an ERC-8004-style agent identity.
 3. Attach testnet tx hashes for session creation, simulated hire, revoke, and PancakeSwap-style proof.
 4. Run BNB Agent Studio CLI and commit command output/screenshots as proof artifacts.

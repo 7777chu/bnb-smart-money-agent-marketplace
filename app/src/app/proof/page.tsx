@@ -7,6 +7,9 @@ const liveLinks = [
   ["Advantage report", "https://bnb-smart-money-agent-marketplace.vercel.app/report"],
 ];
 
+const testnetWallet = "0xfec7107aced49665c420f71c64023dddd07b7777";
+const testnetWalletExplorer = `https://testnet.bscscan.com/address/${testnetWallet}`;
+
 const proofTracks = [
   {
     title: "Main Track — BNB Agent Marketplace",
@@ -35,7 +38,7 @@ const proofTracks = [
 ];
 
 const nextProofItems = [
-  ["BSC testnet wallet", "Add public wallet address used only for testnet proof."],
+  ["BSC testnet wallet", `${testnetWallet} — public address added for proof artifacts.`],
   ["Agent identity", "Register or mock ERC-8004-style identity and link it from each profile."],
   ["Testnet tx hashes", "Attach tx hashes for session creation, simulated hire, revoke, and PancakeSwap-style proof."],
   ["BNB Agent Studio", "Run BNB Agent Studio CLI and commit command output/screenshots as proof artifacts."],
@@ -82,6 +85,19 @@ export default function ProofPage() {
               <p className="mt-3 break-words text-sm font-semibold text-yellow-100">{href}</p>
             </a>
           ))}
+        </section>
+
+        <section className="rounded-3xl border border-yellow-300/20 bg-yellow-300/10 p-6">
+          <p className="text-sm uppercase tracking-[0.3em] text-yellow-100/70">Public testnet wallet</p>
+          <h2 className="mt-2 text-3xl font-bold text-yellow-100">BSC testnet proof address</h2>
+          <p className="mt-3 break-words font-mono text-sm text-zinc-100">{testnetWallet}</p>
+          <p className="mt-3 max-w-3xl text-zinc-300">
+            This is a public wallet address only. It is used as the anchor for upcoming BSC testnet proof artifacts;
+            no private key, seed phrase, or production fund access is stored in this repository.
+          </p>
+          <a className="mt-5 inline-flex rounded-2xl border border-yellow-300/40 px-5 py-3 font-bold text-yellow-100 transition hover:bg-yellow-300 hover:text-black" href={testnetWalletExplorer} target="_blank">
+            View on BSCScan testnet
+          </a>
         </section>
 
         <section className="rounded-3xl border border-white/10 bg-black/30 p-6">
