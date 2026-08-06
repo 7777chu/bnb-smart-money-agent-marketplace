@@ -19,6 +19,7 @@ BNB Chain does not just need more agents; it needs a trusted front door for choo
 - Marketplace homepage with four Smart Money agent categories
 - Agent profile pages with risk, protocols, cost, metrics, safety controls, and session policy
 - Safe hire flow pages with allowlist, spend cap, expiry, and revoke model
+- My Hired Agents dashboard with session health, cap usage, expiry, recent actions, and revoke entry
 - Agent comparison page for marketplace discovery
 - Agent Advantage Report for measuring AI-agent value vs manual DeFi work
 - Proof Center with live links, bounty fit, and next on-chain proof roadmap
@@ -27,6 +28,7 @@ BNB Chain does not just need more agents; it needs a trusted front door for choo
 
 - Homepage: https://bnb-smart-money-agent-marketplace.vercel.app
 - Compare: https://bnb-smart-money-agent-marketplace.vercel.app/compare
+- Dashboard: https://bnb-smart-money-agent-marketplace.vercel.app/dashboard
 - Advantage Report: https://bnb-smart-money-agent-marketplace.vercel.app/report
 - Proof Center: https://bnb-smart-money-agent-marketplace.vercel.app/proof
 - Example profile: https://bnb-smart-money-agent-marketplace.vercel.app/agents/grid-alpha

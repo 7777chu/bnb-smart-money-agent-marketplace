@@ -20,6 +20,9 @@ export default function Home() {
             <Link className="hidden rounded-full border border-white/10 px-4 py-2 text-sm text-zinc-200 transition hover:bg-white/10 sm:inline-flex" href="/compare">
               Compare
             </Link>
+            <Link className="hidden rounded-full border border-white/10 px-4 py-2 text-sm text-zinc-200 transition hover:bg-white/10 sm:inline-flex" href="/dashboard">
+              Dashboard
+            </Link>
             <Link className="hidden rounded-full border border-white/10 px-4 py-2 text-sm text-zinc-200 transition hover:bg-white/10 sm:inline-flex" href="/proof">
               Proof
             </Link>
@@ -58,6 +61,9 @@ export default function Home() {
               </Link>
               <Link className="rounded-2xl border border-white/15 px-5 py-3 font-bold text-white transition hover:bg-white/10" href="/report">
                 Advantage report
+              </Link>
+              <Link className="rounded-2xl border border-white/15 px-5 py-3 font-bold text-white transition hover:bg-white/10" href="/dashboard">
+                My agents dashboard
               </Link>
               <Link className="rounded-2xl border border-yellow-300/40 px-5 py-3 font-bold text-yellow-100 transition hover:bg-yellow-300 hover:text-black" href="/proof">
                 Proof center
