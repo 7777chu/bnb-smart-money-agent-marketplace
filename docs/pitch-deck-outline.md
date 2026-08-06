@@ -1,96 +1,137 @@
-# Pitch Deck Outline
+# Pitch Deck Outline — Judge Version
 
 ## Slide 1 — Title
 
-BNB Smart Money Agent Marketplace
+**BNB Smart Money Agent Marketplace**
 
-Discover, compare, and hire BNB Chain financial agents safely.
+Discover, compare, hire, monitor, and revoke BNB Chain financial AI agents safely.
+
+Live demo: https://bnb-smart-money-agent-marketplace.vercel.app
 
 ## Slide 2 — Problem
 
-BNB Chain has growing AI-agent supply, but users cannot easily answer:
+Financial AI agents are becoming useful, but the user experience is still unsafe and fragmented.
+
+Users cannot easily answer:
 
 - Which agent should I use?
 - What does it actually do?
-- Can I trust it?
-- What permissions am I giving it?
-- Did it perform better than doing it manually?
+- What protocols and assets can it touch?
+- How much permission am I giving it?
+- Can I revoke it?
+- Did the agent outperform manual DeFi work?
 
 ## Slide 3 — Solution
 
-A marketplace for Smart Money agents with:
+A marketplace layer that turns agents into comparable financial products.
 
-- Four financial categories
-- On-chain identity
-- Performance and risk data
-- Scoped session permissions
-- Hire / revoke UX
-- Agent Advantage Report
+Core UX:
+
+1. Discover by Smart Money category.
+2. Compare risk, protocol coverage, cost, performance, and permission scope.
+3. Inspect the agent profile before hiring.
+4. Hire with spend cap, expiry, allowlist, and revoke controls.
+5. Monitor active sessions from a user dashboard.
+6. Verify proof and bounty fit from a Proof Center.
 
 ## Slide 4 — Product Flow
 
-1. User lands on marketplace
-2. Chooses category
-3. Compares agents
-4. Opens detail page
-5. Reviews risk and permission scope
-6. Hires agent with spend cap and expiry
-7. Monitors output and revokes anytime
+```text
+Marketplace
+→ Compare
+→ Agent Profile
+→ Hire safely
+→ My Agents Dashboard
+→ Revoke / Edit
+→ Advantage Report
+→ Proof Center
+```
 
-## Slide 5 — Four Agent Categories
+The MVP is designed to feel like a real product loop, not a static hackathon landing page.
 
-- Grid Trading
-- LP Rebalancing
-- Yield Optimization
-- Health Factor Monitoring
+## Slide 5 — Four Smart Money Agent Categories
 
-## Slide 6 — Safety Layer
+1. **Grid Trading** — cost-aware grid strategy for BNB pairs.
+2. **LP Rebalancing** — PancakeSwap LP range monitoring and rebalance discipline.
+3. **Yield Optimization** — risk-adjusted yield routing across BNB Chain protocols.
+4. **Health Factor Monitoring** — lending liquidation protection and defensive action.
 
-- Session key
-- Allowlist
+Each category has comparable profile data, safety controls, metrics, cost model, and session policy.
+
+## Slide 6 — Safety / Permission Layer
+
+The marketplace does not assume unlimited wallet control.
+
+Safety primitives:
+
+- Action allowlist
 - Spend cap
 - Expiry
 - Revoke button
+- Read-only default for lower-risk agents
 - Testnet/mainnet separation
-- No hidden user-fund control
+- Visible recent action log
+- User dashboard for ongoing session control
 
-## Slide 7 — Data Layer
+## Slide 7 — Agent Advantage Report
 
-- ERC-8004 identity / 8004scan
-- BSC testnet/mainnet explorer links
-- PancakeSwap liquidity/yield data
-- Agent execution history
-- Performance metrics
+The TermiX-ready report measures whether agents beat manual work.
 
-## Slide 8 — Partner Track Fit
+Measured dimensions:
 
-- Main Track: canonical BNB Agent Studio marketplace
-- Altana: self-custodial agents with scoped sessions
-- TermiX: measured agent advantage
-- PancakeSwap: LP/trader benefit
+- Time saved
+- Monitoring quality
+- Risk enforcement
+- Cost transparency
+- Execution readiness
 
-## Slide 9 — Agent Advantage Report
+Example: manual grid setup takes 12-20 minutes; the agent flow gets the user to a scoped strategy preview in under 1 minute.
 
-Three tasks measured by time, cost, quality:
+## Slide 8 — Bounty / Partner Fit
 
-1. Trading opportunity scan
-2. LP/yield optimization
-3. Risk/health-factor monitoring
+- **Main Track:** marketplace for BNB Chain Smart Money agents.
+- **TermiX:** Agent Advantage Report with measurable agent-vs-manual comparison.
+- **PancakeSwap:** LP rebalancing, grid trading, and yield use cases.
+- **Altana / Session Keys:** scoped permission model with allowlist, spend cap, expiry, and revoke.
+- **BNB Agent Studio:** agent profile and skill publishing path.
 
-## Slide 10 — Business Model
+## Slide 9 — What Is Live
+
+Live demo routes:
+
+- `/` Marketplace homepage
+- `/compare` Agent comparison
+- `/agents/grid-alpha` Agent profile
+- `/hire/grid-alpha` Safe hire flow
+- `/dashboard` My hired agents dashboard
+- `/report` Agent Advantage Report
+- `/proof` Proof Center
+
+The app is deployed on Vercel and backed by a public GitHub repo.
+
+## Slide 10 — Roadmap
+
+Next proof sprint:
+
+1. Add BSC testnet wallet address used only for proof.
+2. Register or mock ERC-8004-style agent identity.
+3. Attach tx hashes for session creation, simulated hire, revoke, and PancakeSwap-style proof.
+4. Run BNB Agent Studio CLI and commit proof artifacts.
+5. Convert demo data into live read-only protocol data.
+
+## Slide 11 — Business Model
+
+Potential monetization:
 
 - Agent listing fee
 - Hire fee
 - x402/B402 per-call payment
 - Performance fee for financial agents
-- Featured agent placement
+- Featured marketplace placement
+- Pro analytics for agent operators
 
-## Slide 11 — Roadmap
+## Slide 12 — Closing
 
-- MVP: four categories + mock/partial live data
-- Hackathon: testnet proof + Altana + report
-- Post-hackathon: live BNB Agent Studio marketplace candidate
+BNB Chain does not just need more agents. It needs the trusted front door for financial agents.
 
-## Slide 12 — Ask / Closing
-
-Make BNB Chain the default home for Smart Money agents.
+**BNB Smart Money Agent Marketplace** makes agents discoverable, comparable, hireable, monitorable, and revocable.
