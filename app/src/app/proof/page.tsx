@@ -10,7 +10,24 @@ const liveLinks = [
 const testnetWallet = "0x617f44e176fd0163614761c4a2bb901650aeab66";
 const testnetWalletExplorer = `https://testnet.bscscan.com/address/${testnetWallet}`;
 const testnetProofTx = "0x38923db4f65ce099350acd302046d86c8646be7749eb4faac1c03dbc50324af1";
-const testnetProofTxExplorer = `https://testnet.bscscan.com/tx/${testnetProofTx}`;
+
+const proofTransactions = [
+  {
+    label: "Wallet anchor",
+    hash: testnetProofTx,
+    detail: "Initial marketplace proof anchor sent from the proof wallet to itself with metadata.",
+  },
+  {
+    label: "Simulated hire",
+    hash: "0xc087042e60edff84e86dce070fa9d7fcbb6fcfd6266e0323e74539dbc48fe334",
+    detail: "Represents a scoped Grid Alpha hire session with cap and expiry metadata.",
+  },
+  {
+    label: "Simulated revoke",
+    hash: "0x3ba1b4c2b878ed48eb5b194a32c24d4b30fecdd02042a9500adc906c5d4f66ed",
+    detail: "Represents closing/revoking the Grid Alpha session from the proof wallet.",
+  },
+];
 
 const proofTracks = [
   {
@@ -42,7 +59,7 @@ const proofTracks = [
 const nextProofItems = [
   ["BSC testnet wallet", `${testnetWallet} — public address added for proof artifacts.`],
   ["Agent identity", "Register or mock ERC-8004-style identity and link it from each profile."],
-  ["Testnet tx hashes", `${testnetProofTx} — confirmed BSC testnet proof transaction.`],
+  ["Testnet tx hashes", "Three confirmed BSC testnet proof transactions: wallet anchor, simulated hire, and simulated revoke."],
   ["BNB Agent Studio", "Run BNB Agent Studio CLI and commit command output/screenshots as proof artifacts."],
 ];
 
@@ -104,15 +121,19 @@ export default function ProofPage() {
 
         <section className="rounded-3xl border border-emerald-400/20 bg-emerald-400/10 p-6">
           <p className="text-sm uppercase tracking-[0.3em] text-emerald-100/70">Confirmed testnet transaction</p>
-          <h2 className="mt-2 text-3xl font-bold text-emerald-100">BSC testnet proof tx</h2>
-          <p className="mt-3 break-words font-mono text-sm text-zinc-100">{testnetProofTx}</p>
+          <h2 className="mt-2 text-3xl font-bold text-emerald-100">BSC testnet proof transactions</h2>
           <p className="mt-3 max-w-3xl text-zinc-300">
-            This transaction anchors the marketplace proof wallet on BSC testnet. It was sent from the proof wallet to itself
-            with metadata for the BNB Smart Money Agent Marketplace hire-session proof.
+            These transactions anchor the marketplace proof wallet on BSC testnet and simulate the core hire/revoke lifecycle.
           </p>
-          <a className="mt-5 inline-flex rounded-2xl border border-emerald-300/40 px-5 py-3 font-bold text-emerald-100 transition hover:bg-emerald-300 hover:text-black" href={testnetProofTxExplorer} target="_blank">
-            View proof transaction
-          </a>
+          <div className="mt-5 grid gap-3">
+            {proofTransactions.map((tx) => (
+              <a key={tx.hash} className="rounded-2xl border border-emerald-300/20 bg-black/20 p-4 transition hover:border-emerald-300/60 hover:bg-emerald-300/10" href={`https://testnet.bscscan.com/tx/${tx.hash}`} target="_blank">
+                <p className="text-sm font-bold text-emerald-100">{tx.label}</p>
+                <p className="mt-2 break-words font-mono text-xs text-zinc-100">{tx.hash}</p>
+                <p className="mt-2 text-sm text-zinc-300">{tx.detail}</p>
+              </a>
+            ))}
+          </div>
         </section>
 
         <section className="rounded-3xl border border-white/10 bg-black/30 p-6">
